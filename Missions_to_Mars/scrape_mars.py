@@ -74,7 +74,7 @@ def scrape():
     df.set_index("Description", inplace=True)
     df
 
-    facts = df.to_html()
+    facts = df.to_html(classes="table table-striped")
 
 
     # Mars Hemispheres
@@ -107,11 +107,10 @@ def scrape():
         #Append dictionary to list of URLs
         hemisphere_urls.append(hemisphere_dict)
         
+        print(hemisphere_dict)
         #Go back to main page
         browser.back()
-
-
-    print(hemisphere_urls)
+    
 
     # Store data in a dictionary
     mars_data = {

@@ -1,3 +1,33 @@
-h1 {
-    color: blue;
+html *
+{
+   font-family: Arial !important;
 }
+
+.button {
+    background-color:#2268a1;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+figure {
+    display: inline-block;
+    text-align: center;
+}
+
+table {
+    width: 90%;
+}
+  
+th {
+    height: 40px;
+}
+
+#element1 {float:left;}
+#element2 {padding-left : 400px; float:left;}
