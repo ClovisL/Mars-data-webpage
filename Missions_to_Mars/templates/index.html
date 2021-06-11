@@ -15,20 +15,28 @@
       <h1><b>Mission To Mars</b></h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
+
     <h2><b>Latest Mars News</b></h2>
     <h4><b>{{ mars.news_title }}</b></h4>
     <p>{{ mars.news_paragraph }}</p>
+
     <h2><b>Featured Mars Image</b></h2>
     <img src="{{ mars.mars_img }}" alt="Mars">
     <p>&nbsp;</p>
-    <p><b>Mars Facts</b></p>
-    <p>{{ mars.mars_facts }}</p>
+
+    <h2><b><center>Mars Facts</center></b></h2>
+    {{ mars.mars_facts|safe }} 
     <p>&nbsp;</p>
     <h2 style="text-align:center;">Mars Hemispheres</font></h2>
-    <img src="{{ mars.hem_urls }}" alt="Mars" class="center">
-    <img src="{{ mars.hem_urls }}" alt="Mars" class="center">
-    <img src="{{ mars.hem_urls }}" alt="Mars" class="center">
-    <img src="{{ mars.hem_urls }}" alt="Mars" class="center">
+
+    {% for hemisphere in mars.hem_urls %}
+
+    <h3>{{ hemisphere.title }}</h3>
+    <img src="{{ hemisphere.img_url }}" width = "480px" height = "480px" alt="Mars" class="center">
+
+    {% endfor %}
+    
+    <p>{{ mars.hem_urls }}</p>
   </div>
   </div>
 </body>
