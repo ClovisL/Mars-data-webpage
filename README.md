@@ -13,3 +13,5 @@ Created a web page that displays all of the scraped data in an HTML template wit
 * Created a flask app that imported and ran the scraping code and stored the returned python dictionary into MongoDB.
 * Created a root route that queries MongoDB and passes the Mars data into an HTML template.
 * Created an index.html file that takes the Mars data dictionary and displays it all in HTML format.
+
+### To run the app, use a command line to run the app.py file, which will create a localhost. Enter the localhost address into a browser window.
